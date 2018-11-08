@@ -3,8 +3,8 @@
 #ask for input
 puts "Please enter 1-9:"
 
-#get input
-input = gets.strip
+
+input = gets.strip#get input
 
 #convert input to index
 input_to_index

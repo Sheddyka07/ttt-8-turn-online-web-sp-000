@@ -7,6 +7,17 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+#coverts a user's place on the board to the index integer
+def input_to_index(user_input)
+  index = user_input.to_i
+  index -= 1
+  return index
+end
+
+
+
+
+
 
 def valid_move?(board, index)
   if index.between?(0, 8) == true && position_taken?(board, index) == false
@@ -23,9 +34,6 @@ def position_taken?(board, index)
 end
 end
 
-def input_to_index(input)
-  index = input.to_i - 1
-end
 
 def move(board, index, value = "X")
   board[index] = value

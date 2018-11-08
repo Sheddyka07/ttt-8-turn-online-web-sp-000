@@ -24,15 +24,21 @@ def position_taken?(board, index)
   end 
 end
 
-def input_to_index(user_input)
-  location = user_input - 1
+def input_to_index(input)
+  index = input.to_i - 1
 end
 
+def move(board, index, value = "X")
+  board[index] = value
 
-def move(board, input_to_index, token = "X")
-  
+  board = [" ", " ", " "]
+    def update_array_at_with(array, index, value)
+     array[index] = value
+    end
+  update_array_at_with(board, 0, "X")
+  #The element at index 0 of array 'board' is set to the value "X"
+  board
 end
-
 
 
 
